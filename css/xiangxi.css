@@ -371,6 +371,9 @@
     color: rgb(19, 175, 19);
     background-color: white;
 }
+.hi img{
+    width: 2.4rem;
+}
 #unit{
     width: 100%;
     float: left;

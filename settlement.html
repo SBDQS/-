@@ -40,7 +40,7 @@
                         </li>
                         <li id="discount_a" class="settlement_right_gg" value="1200">￥1200</li>
                         <li id="little_cost_a" class="settlement_right_gg" value="1699"></li>
-                        <li class="settlement_right_gg"><button class="btn btn-xs" value="a" type="button">删除</button></li>
+                        <li class="settlement_right_gg"><button class="set_r_btn" value="a" type="button">删除</button></li>
                     </ul>
                 </li>
             </ul>
@@ -54,7 +54,7 @@
                         </li>
                         <li id="discount_b" class="settlement_right_gg" value="1200">￥1200</li>
                         <li id="little_cost_b" class="settlement_right_gg" value="1699"></li>
-                        <li class="settlement_right_gg"><button class="btn btn-xs" value="b" type="button">删除</button></li>
+                        <li class="settlement_right_gg"><button class="set_r_btn" value="b" type="button">删除</button></li>
                     </ul>
                 </li>
             </ul>
@@ -68,7 +68,7 @@
                         </li>
                         <li id="discount_c" class="settlement_right_gg" value="1200">￥1200</li>
                         <li id="little_cost_c" class="settlement_right_gg" value="1699"></li>
-                        <li class="settlement_right_gg"><button class="btn btn-xs" value="c" type="button">删除</button></li>
+                        <li class="settlement_right_gg"><button class="set_r_btn" value="c" type="button">删除</button></li>
                     </ul>
                 </li>
             </ul>
@@ -82,7 +82,7 @@
                         </li>
                         <li id="discount_d" class="settlement_right_gg" value="1200">￥1200</li>
                         <li id="little_cost_d" class="settlement_right_gg" value="1699"></li>
-                        <li class="settlement_right_gg"><button class="btn btn-xs" value="d" type="button">删除</button></li>
+                        <li class="settlement_right_gg"><button class="set_r_btn" value="d" type="button">删除</button></li>
                     </ul>
                 </li>
             </ul>
@@ -96,7 +96,7 @@
                         </li>
                         <li id="discount_e" class="settlement_right_gg" value="1200">￥1200</li>
                         <li id="little_cost_e" class="settlement_right_gg" value="1699"></li>
-                        <li class="settlement_right_gg"><button class="btn btn-xs" value="e" type="button">删除</button></li>
+                        <li class="settlement_right_gg"><button class="set_r_btn" value="e" type="button">删除</button></li>
                     </ul>
                 </li>
             </ul>
@@ -114,7 +114,7 @@
             <div id="accept">
                 <input id="ch" type="checkbox" onclick="check()">
                 <span>我已阅读并接受</span>
-                <a href="#" data-toggle="modal" data-target="#myModal">《售后政策》</a>
+                <a href="#" data-toggle="modal" data-target="#myModal" style="font-size: 0.5rem">《售后政策》</a>
                 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                     <div class="modal-dialog">
                         <div class="modal-content">
@@ -150,7 +150,7 @@
                 </div>
             </div>
             <div id="make_sure">
-                应付总额<span id="mk_money"></span><br>
+                <label style="font-size: 0.6rem ">应付总额</label><span id="mk_money"></span><br>
                 <button type="button" disabled id="mk_sure">确认购买</button>
             </div>
         </div>
@@ -165,7 +165,7 @@
 </body>
 </html>
 <script>
-    $(".btn").click(function(){
+    $(".set_r_btn").click(function(){
         var btn_val = (this).value;
         var frame = "#"+btn_val;
         $(frame).css("display","none");
@@ -272,9 +272,7 @@
 
     $("#mk_sure").click(function(){
         var mk_money = document.getElementById("mk_sure").value;
-        location.href = "collect.html?param=" + mk_money;
-        //window.open('colletc.html');
-        
+        location.href = "collect.html?param=" + mk_money;       
 
     })
 

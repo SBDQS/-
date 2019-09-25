@@ -6,32 +6,45 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>后台管理</title>
     <link rel="stylesheet" href="css/public.css">
-    <!-- <link rel="stylesheet" href="css/bootstrap.min.css">
-
-    <link rel="stylesheet" href="css/datatables.min.css"> -->
-    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js"></script>
+   
+    <!-- <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js"></script>
     <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css">
-    <script src="https://cdn.bootcss.com/datatables/1.10.16/js/jquery.dataTables.js"></script>
+    <script src="https://cdn.bootcss.com/datatables/1.10.16/js/jquery.dataTables.js"></script> -->
     
-    
+    <script src="js/jquery-3.4.1.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.min.css"> 
+    <script src="js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/jquery.dataTables.css">
+    <script src="js/jquery.dataTables.js"></script>
 </head>
 <style>
-/* .btn-group button:nth-of-type(1){
-    margin: 0.2rem -0.2rem;
+.btn-group button:nth-of-type(1){
+    margin: 0.2rem 0.2rem;
 }
 .btn-group button:nth-of-type(2){
-    margin: 0.2rem 0.2rem;
+    margin: 0.2rem 0.4rem;
 }
 .btn-group button:nth-of-type(3){
-    margin:0.2rem 0.2rem;
-} */
+    margin:0.2rem 0.6rem;
+}
 .btn-group button{
-    
-    margin: 0.2rem 0.2rem;
+    width:2rem;
+    height: 1rem;
+    font-size: 0.38rem;
+    /* margin: 0.2rem 0.2rem; */
    
 }
+/* 对学习工具的下拉栏重新覆盖样式 */
+.top-left .xuexi>ul>li {
+            width: 2.33rem;
+        }
+
+        .top-left .xuexi>ul>li>a>img {
+            width: 0.5rem;
+        }
+   
 
 </style>
 <!--  bootstrap+datatable实现增删查改 -->
@@ -40,7 +53,6 @@
     <div id="top" ></div>
         <section>
             <!-- 方法二:通过js调用带有id的模态框 -->
-            
             <div class="btn-group">
                  <button id="btn_add" type="button" class="btn  btn-primary"  data-toggle="modal" data-target="#addCourse">
                     <span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span> 添加</button>
@@ -71,7 +83,6 @@
                                                 <input type="text"  id="addCourseName" class="form-control"  required="required" >
                                         </div>
                                     </div>
-
                                     <!--添加讲师名  -->
                                     <div class="form-group">
                                         
@@ -85,7 +96,6 @@
                                         
                                         
                                     </div>
-                                    
                                     <!-- 添加课程价格 -->
                                     <div class="form-group">
                                             
@@ -99,7 +109,6 @@
                                         
                                             
                                     </div>
-
                                     <!-- 添加课程时长 -->
                                     <div class="form-group">
                                         
@@ -113,7 +122,6 @@
                                         </div>
                                         
                                     </div>
-
                                     <!-- 添加课程评分 -->
                                       <div class="form-group">
                                           
@@ -127,17 +135,12 @@
                                           
                                           
                                       </div>         
-
                             </form>
-
-                            
-                            
                         </div>
                         <div class="modal-footer">
                             <button id="cancelAdd" type="button" class="btn btn-default" data-dismiss="modal">取消</button>
                             <button id="saveAdd" type="button" class="btn btn-success" data-dismiss="modal" >保存</button>
                         </div>
-
                     </div>
                 </div>
             </div>
@@ -239,7 +242,7 @@
                 </div>
             </div>
             
-            
+            <!--表格 -->
             <div >
                 <table id="listCourse" class="table table-striped table-bordered  table-hover display  order-column  row-border  " cellspacing="0" width="100%">
                     <thead>
@@ -253,7 +256,7 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
+                        <!-- <tr>
                             <td>11</td>
                             <td>22</td>
                             <td>11</td>
@@ -268,13 +271,12 @@
                                 <td>11</td>
                                 <td>11</td>
                                 <td>11</td>
-                         </tr>
+                         </tr> -->
                         
                     </tbody>
                 </table>
             </div>
                         
-
         </section>
     <div id="bottom"></div>
     </div>
